@@ -5,14 +5,15 @@
   Time: 20:45
   To change this template use File | Settings | File Templates.
 --%>
+<%@taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ page contentType="text/html;charset=UTF-8" language=  "java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="./media/favicon.ico?v=2" type="image/x-icon">
+<%--    <link rel="shortcut icon" href="./media/favicon.ico?v=2" type="image/x-icon">--%>
     <title>lab2</title>
     <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
     <script src="./js/Validator.js"></script>

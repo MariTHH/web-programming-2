@@ -4,7 +4,7 @@ function updateValidationPanel() {
     validationInfoPanel.classList.remove("show");
 }
 
-
+// const svgCircleElement = document.querySelector('circle');
 function getDataFromForm() {
     updateValidationPanel();
     let xValidity = isXValid();
@@ -33,7 +33,8 @@ function sendDataToServer(x, y, r) {
                 "timezone": new Date().getTimezoneOffset()
             },
             success: function () {
-                window.location.replace('./result.jsp');;
+                window.location.replace('./result.jsp');
+                // svgCircleElement.setAttribute('fill', 'green');
             },
             error: function (xhr, textStatus, err) {
                 alert("readyState: " + xhr.readyState + "\n" +
