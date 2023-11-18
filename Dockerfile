@@ -1,5 +1,5 @@
-FROM tomcat:10.1.1
-LABEL maintainer="satheeskumar.pmp@gmail.com"
+FROM tomcat:10.1.15
+#LABEL maintainer="satheeskumar.pmp@gmail.com"
 
 ADD target/web2-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
 
