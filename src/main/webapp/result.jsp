@@ -33,6 +33,7 @@
                     <td>${shots.getLast().getTime().toString()}</td>
                     <td>${shots.getLast().getScriptTime().toString()}</td>
                     <td>${shots.getLast().getStatus().toString()}</td>
+
                 </c:when>
                 <c:otherwise>
                 </c:otherwise>

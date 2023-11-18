@@ -12,3 +12,9 @@
 //         }
 //     })
 // }
+
+// function changeColor(){
+//     if (col.getStatus()) {
+//         shot.setAttribute("fill", "green");
+// //     }
+// }

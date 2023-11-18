@@ -251,3 +251,11 @@ footer {
     text-align: center;
     align-self: center;
 }
+
+.shot.red {
+    fill: red;
+}
+
+.shot.green {
+    fill: green;
+}

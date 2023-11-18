@@ -6,14 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@taglib prefix="c" uri="jakarta.tags.core" %>
-<%@ page contentType="text/html;charset=UTF-8" language=  "java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
-<%--    <link rel="shortcut icon" href="./media/favicon.ico?v=2" type="image/x-icon">--%>
+    <%--    <link rel="shortcut icon" href="./media/favicon.ico?v=2" type="image/x-icon">--%>
     <title>lab2</title>
     <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
     <script src="./js/Validator.js"></script>
@@ -88,8 +88,9 @@
                 <%--@elvariable id="shots" type="java.util.LinkedList"--%>
                 <c:forEach items="${shots}" var="col">
                     <circle class="shot" cx="${150 + 50 * 2/col.getR() * col.getX()}"
+                            fill = "${col.getStatus() ? '#98FB98' :  'orangered'}"
                             cy="${150 - 50 * 2/col.getR() * col.getY()}" r="2"
-                            fill="orangered" stroke-width="0"></circle>
+                            stroke-width="0"></circle>
                 </c:forEach>
             </svg>
         </div>
@@ -117,7 +118,9 @@
                     </div>
                     <div id="formButtons">
                         <input type="submit" class="element" name="submit-btn" value="Подтвердить">
-                        <button onClick="window.location.replace('./result.jsp');" type="reset" onclick="">Последний результат</button>
+                        <button onClick="window.location.replace('./result.jsp');" type="reset" onclick="">Последний
+                            результат
+                        </button>
                     </div>
                 </div>
             </div>
@@ -142,12 +145,14 @@
         <%--@elvariable id="shots" type="java.util.LinkedList"--%>
         <c:forEach items="${shots}" var="col">
             <tr>
-                <td>${col.getX().toString().format("%.2f", col.getX()).replaceAll(",",".")}</td>
-                <td>${col.getY().toString().format("%.2f", col.getY()).replaceAll(",",".")}</td>
-                <td>${col.getR().toString().format("%.2f", col.getR()).replaceAll(",",".")}</td>
-                <td>${col.getTime().toString()}</td>
-                <td>${col.getScriptTime().toString()}</td>
-                <td>${col.getStatus().toString()}</td>
+            <td>${col.getX().toString().format("%.2f", col.getX()).replaceAll(",",".")}</td>
+            <td>${col.getY().toString().format("%.2f", col.getY()).replaceAll(",",".")}</td>
+            <td>${col.getR().toString().format("%.2f", col.getR()).replaceAll(",",".")}</td>
+            <td>${col.getTime().toString()}</td>
+            <td>${col.getScriptTime().toString()}</td>
+            <td>${col.getStatus().toString()} </td>
+            <tr>
+            </tr>
             </tr>
         </c:forEach>
     </table>
