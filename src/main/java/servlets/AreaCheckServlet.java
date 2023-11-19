@@ -77,6 +77,6 @@ public class AreaCheckServlet extends HttpServlet {
     }
 
     private boolean isTriangleZone(double x, double y, double r) {
-        return (x <= 0) && (y <= 0) && (y >= (2) * x - r);
+        return (x >= 0) && (y <= 0) && (y >=  x - r/2);
     }
 }
